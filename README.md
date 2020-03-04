@@ -1,0 +1,2 @@
+-execute "rasa run actions" for action server
+-then rasa shell

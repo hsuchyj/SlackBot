@@ -1,0 +1,186 @@
+﻿{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0.0",
+    "id": "c220e500-aff0-4648-9f72-ac607aa4e00d",
+    "packageName": "com.app.ada3",
+    "developer": {
+        "name": "Hunter",
+        "websiteUrl": "https://github.com/hsuchyj",
+        "privacyUrl": "https://github.com/hsuchyj",
+        "termsOfUseUrl": "https://github.com/hsuchyj"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Ada3",
+        "full": "AdaBot3"
+    },
+    "description": {
+        "short": "This is the 3rd attempt",
+        "full": "Lets make a really good bot"
+    },
+  "icons": {
+    "outline": "bot_blue.png",
+    "color": "bot_blue.png"
+  },
+  "accentColor": "#0079bf",
+  "configurableTabs": [
+    {
+      "configurationUrl": "http://d12c48ae.ngrok.io/tab/tabConfig/index.html",
+      "canUpdateConfiguration": false,
+      "scopes": [ "team", "groupchat" ]
+    }
+  ],
+  "staticTabs": [
+    {
+      "contentUrl": "http://d12c48ae.ngrok.io/loading",
+      "entityId": "1on1test123",
+      "name": "Bot Info",
+      "scopes": [
+        "team",
+        "personal"
+      ]
+    },
+    {
+      "contentUrl": "http://d12c48ae.ngrok.io/tab-auth/simple",
+      "entityId": "simpleAuth",
+      "name": "Simple Auth",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "contentUrl": "http://d12c48ae.ngrok.io/tab-auth/silent",
+      "entityId": "silentAuth",
+      "name": "Silent Auth",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "616259dc-f315-41ac-a172-222855a77252",
+      "scopes": [ "team", "personal", "groupchat" ],
+      "commandLists": [
+        {
+          "scopes": [
+            "team"
+          ],
+          "commands": [
+            {
+              "title": "hello",
+              "description": "Runs the simplest hello dialog"
+            },
+            {
+              "title": "multi dialog 2",
+              "description": "Displays a card with invoke buttons"
+            },
+            {
+              "title": "roster",
+              "description": "Fetches the full roster payload for the current conversation"
+            },
+            {
+              "title": "names",
+              "description": "Lists the names of the users for the current conversation"
+            },
+            {
+              "title": "last dialog",
+              "description": "Shows which dialog sent the last message"
+            },
+            {
+              "title": "send message to 1:1",
+              "description": "Send the user a 1:1 message"
+            },
+            {
+              "title": "setup text message",
+              "description": "Sets up a text message that can be updated"
+            },
+            {
+              "title": "update text message",
+              "description": "Updates a text message once it is setup to be updated"
+            },
+            {
+              "title": "setup card message",
+              "description": "Sets up a card that can be updated"
+            }
+          ]
+        },
+        {
+          "scopes": [
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "hello",
+              "description": "Runs the simplest hello dialog"
+            },
+            {
+              "title": "multi dialog 2",
+              "description": "Displays a card with invoke buttons"
+            },
+            {
+              "title": "roster",
+              "description": "Fetches the full roster payload for the current conversation"
+            },
+            {
+              "title": "names",
+              "description": "Lists the names of the users for the current conversation"
+            },
+            {
+              "title": "last dialog",
+              "description": "Shows which dialog sent the last message"
+            },
+            {
+              "title": "send message to 1:1",
+              "description": "Send the user a 1:1 message"
+            },
+            {
+              "title": "setup text message",
+              "description": "Sets up a text message that can be updated"
+            },
+            {
+              "title": "update text message",
+              "description": "Updates a text message once it is setup to be updated"
+            },
+            {
+              "title": "setup card message",
+              "description": "Sets up a card that can be updated"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "616259dc-f315-41ac-a172-222855a77252",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "search123",
+          "description": "Find a card",
+          "title": "Search",
+          "initialRun": true,
+          "parameters": [
+            {
+              "title": "query123",
+              "name": "query",
+              "description": "Search string"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "d12c48ae.ngrok.io"
+  ]
+}
